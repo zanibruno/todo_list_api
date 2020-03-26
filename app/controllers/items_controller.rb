@@ -24,15 +24,15 @@ class ItemsController < ApplicationController
     end
 #
     def update
-#         get_item
-#         item.update(item_params)
-#
-#         render json: item
+        get_item
+        item.update(item_params)
+
+        render json: item
     end
 #
     def destroy
-#         item.destroy
-#         render json: {itemId: item.id}
+        item.destroy
+        render json: {itemId: item.id}
     end
 #
 #
@@ -43,6 +43,6 @@ class ItemsController < ApplicationController
     end
 #
     def item_params
-#         params.require(:item).permit(:name, :description, :list_id)
+        params.require(:item).permit(:name, :description, :list_id)
     end
 end
