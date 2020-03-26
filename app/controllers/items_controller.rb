@@ -1,19 +1,19 @@
 class ItemsController < ApplicationController
-#     before_action :get_item, only: [:show, :update, :destroy]
+    before_action :get_item, only: [:show, :update, :destroy]
 #
-#     def index
+    def index
 #         items = Item.all
 #
 #         render json: items
-#     end
+    end
 #
-#     def show
+    def show
 #         get_item
 #
 #         render json: item
-#     end
+    end
 #
-#     def create
+    def create
 #         list = List.find_by(id: params[:list_id])
 #         item = list.items.build(item_params)
 #         if item.save
@@ -21,28 +21,28 @@ class ItemsController < ApplicationController
 #         else
 #             render json: {message: "Item not created"}
 #         end
-#     end
+    end
 #
-#     def update
+    def update
 #         get_item
 #         item.update(item_params)
 #
 #         render json: item
-#     end
+    end
 #
-#     def destroy
+    def destroy
 #         item.destroy
 #         render json: {itemId: item.id}
-#     end
+    end
 #
 #
-#     private
+    private
 #
-#     def get_item
+    def get_item
 #         item = Item.find_by(id: params[:id])
-#     end
+    end
 #
-#     def item_params
+    def item_params
 #         params.require(:item).permit(:name, :description, :list_id)
-#     end
+    end
 end
