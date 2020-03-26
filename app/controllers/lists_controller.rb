@@ -1,54 +1,54 @@
 class ListsController < ApplicationController
-#     before_action :get_lists, only: [:show, :update, :destroy]
+    before_action :get_lists, only: [:show, :update, :destroy]
 #
-#     def index
+    def index
 #         lists = List.all
 #         render json: lists.to_json(:include => {:items => {:only => [:id, :name, :description, :list_id]}})
-#     end
+    end
 #
-#     def show
+    def show
 #         get_list
 #         if list
 #             render json: list.to_json(:include => {:items => {:only => [:id, :name, :description, :list_id]}})
 #         else
 #             render json: {message: "List not found"}
 #         end
-#     end
+    end
 #
-#     def create
+    def create
 #         list = List.new(list_params)
 #         if list.save
 #             render json: list
 #         else
 #             render json: {message: "list not created"}
 #         end
-#     end
+    end
 #
-#     def update
+    def update
 #         get_list
 #         if list.update(list_params)
 #             render json: list
 #         else
 #             render json: {message: "list not updated"}
 #         end
-#     end
+    end
 #
-#     def destroy
+    def destroy
 #         get_list
 #         item.delete
 #
 #         render json: {listId: list.id}
-#     end
+    end
 #
 #
 #
-#     private
+    private
 #
-#     def get_list
+    def get_list
 #         list = List.find_by(id: params[:id ])
-#     end
+    end
 #
-#     def list_params
+    def list_params
 #         params.require(:list).permit(:name)
-#     end
+    end
 end
