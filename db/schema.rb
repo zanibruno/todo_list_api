@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2020_03_24_180023) do
 
-  create_table "items", force: :cascade do |t|
+    create_table "items", force: :cascade do |t|
     t.string "name"
     t.string "description"
     t.integer "list_id"
