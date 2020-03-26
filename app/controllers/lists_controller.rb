@@ -1,4 +1,4 @@
-# class ListsController < ApplicationController
+class ListsController < ApplicationController
 #     before_action :get_lists, only: [:show, :update, :destroy]
 #
 #     def index
@@ -51,4 +51,4 @@
 #     def list_params
 #         params.require(:list).permit(:name)
 #     end
-# end
+end
