@@ -2,26 +2,26 @@ class ListsController < ApplicationController
     before_action :get_lists, only: [:show, :update, :destroy]
 #
     def index
-#         lists = List.all
-#         render json: lists.to_json(:include => {:items => {:only => [:id, :name, :description, :list_id]}})
+        lists = List.all
+        render json: lists.to_json(:include => {:items => {:only => [:id, :name, :description, :list_id]}})
     end
 #
     def show
-#         get_list
-#         if list
-#             render json: list.to_json(:include => {:items => {:only => [:id, :name, :description, :list_id]}})
-#         else
-#             render json: {message: "List not found"}
-#         end
+        get_list
+        if list
+            render json: list.to_json(:include => {:items => {:only => [:id, :name, :description, :list_id]}})
+        else
+            render json: {message: "List not found"}
+        end
     end
 #
     def create
-#         list = List.new(list_params)
-#         if list.save
-#             render json: list
-#         else
-#             render json: {message: "list not created"}
-#         end
+        list = List.new(list_params)
+        if list.save
+            render json: list
+        else
+            render json: {message: "list not created"}
+        end
     end
 #
     def update
@@ -45,7 +45,7 @@ class ListsController < ApplicationController
     private
 #
     def get_list
-#         list = List.find_by(id: params[:id ])
+        list = List.find_by(id: params[:id ])
     end
 #
     def list_params
