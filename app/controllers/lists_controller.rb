@@ -25,19 +25,19 @@ class ListsController < ApplicationController
     end
 #
     def update
-#         get_list
-#         if list.update(list_params)
-#             render json: list
-#         else
-#             render json: {message: "list not updated"}
-#         end
+        get_list
+        if list.update(list_params)
+            render json: list
+        else
+            render json: {message: "list not updated"}
+        end
     end
 #
     def destroy
-#         get_list
-#         item.delete
-#
-#         render json: {listId: list.id}
+        get_list
+        item.delete
+
+        render json: {listId: list.id}
     end
 #
 #
@@ -49,6 +49,6 @@ class ListsController < ApplicationController
     end
 #
     def list_params
-#         params.require(:list).permit(:name)
+        params.require(:list).permit(:name)
     end
 end
